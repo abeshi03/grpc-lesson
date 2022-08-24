@@ -20,14 +20,14 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type ListFileRequest struct {
+type ListFilesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *ListFileRequest) Reset() {
-	*x = ListFileRequest{}
+func (x *ListFilesRequest) Reset() {
+	*x = ListFilesRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_proto_file_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -35,13 +35,13 @@ func (x *ListFileRequest) Reset() {
 	}
 }
 
-func (x *ListFileRequest) String() string {
+func (x *ListFilesRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*ListFileRequest) ProtoMessage() {}
+func (*ListFilesRequest) ProtoMessage() {}
 
-func (x *ListFileRequest) ProtoReflect() protoreflect.Message {
+func (x *ListFilesRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_proto_file_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -53,12 +53,12 @@ func (x *ListFileRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use ListFileRequest.ProtoReflect.Descriptor instead.
-func (*ListFileRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use ListFilesRequest.ProtoReflect.Descriptor instead.
+func (*ListFilesRequest) Descriptor() ([]byte, []int) {
 	return file_proto_file_proto_rawDescGZIP(), []int{0}
 }
 
-type ListFileResponse struct {
+type ListFilesResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -66,8 +66,8 @@ type ListFileResponse struct {
 	Filenames []string `protobuf:"bytes,1,rep,name=filenames,proto3" json:"filenames,omitempty"`
 }
 
-func (x *ListFileResponse) Reset() {
-	*x = ListFileResponse{}
+func (x *ListFilesResponse) Reset() {
+	*x = ListFilesResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_proto_file_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -75,13 +75,13 @@ func (x *ListFileResponse) Reset() {
 	}
 }
 
-func (x *ListFileResponse) String() string {
+func (x *ListFilesResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*ListFileResponse) ProtoMessage() {}
+func (*ListFilesResponse) ProtoMessage() {}
 
-func (x *ListFileResponse) ProtoReflect() protoreflect.Message {
+func (x *ListFilesResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_proto_file_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -93,12 +93,12 @@ func (x *ListFileResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use ListFileResponse.ProtoReflect.Descriptor instead.
-func (*ListFileResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use ListFilesResponse.ProtoReflect.Descriptor instead.
+func (*ListFilesResponse) Descriptor() ([]byte, []int) {
 	return file_proto_file_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *ListFileResponse) GetFilenames() []string {
+func (x *ListFilesResponse) GetFilenames() []string {
 	if x != nil {
 		return x.Filenames
 	}
@@ -109,17 +109,17 @@ var File_proto_file_proto protoreflect.FileDescriptor
 
 var file_proto_file_proto_rawDesc = []byte{
 	0x0a, 0x10, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x12, 0x04, 0x66, 0x69, 0x6c, 0x65, 0x22, 0x11, 0x0a, 0x0f, 0x4c, 0x69, 0x73, 0x74,
-	0x46, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x30, 0x0a, 0x10, 0x4c,
-	0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
-	0x1c, 0x0a, 0x09, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x18, 0x01, 0x20, 0x03,
-	0x28, 0x09, 0x52, 0x09, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x32, 0x48, 0x0a,
-	0x0b, 0x46, 0x69, 0x6c, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x39, 0x0a, 0x09,
-	0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x73, 0x12, 0x15, 0x2e, 0x66, 0x69, 0x6c, 0x65,
-	0x2e, 0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x15, 0x2e, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x42, 0x06, 0x5a, 0x04, 0x2e, 0x2f, 0x70, 0x62, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x6f, 0x12, 0x04, 0x66, 0x69, 0x6c, 0x65, 0x22, 0x12, 0x0a, 0x10, 0x4c, 0x69, 0x73, 0x74,
+	0x46, 0x69, 0x6c, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x31, 0x0a, 0x11,
+	0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x1c, 0x0a, 0x09, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x18, 0x01,
+	0x20, 0x03, 0x28, 0x09, 0x52, 0x09, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x32,
+	0x4b, 0x0a, 0x0b, 0x46, 0x69, 0x6c, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3c,
+	0x0a, 0x09, 0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x73, 0x12, 0x16, 0x2e, 0x66, 0x69,
+	0x6c, 0x65, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x46, 0x69, 0x6c, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x46,
+	0x69, 0x6c, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x06, 0x5a, 0x04,
+	0x2e, 0x2f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -136,12 +136,12 @@ func file_proto_file_proto_rawDescGZIP() []byte {
 
 var file_proto_file_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_proto_file_proto_goTypes = []interface{}{
-	(*ListFileRequest)(nil),  // 0: file.ListFileRequest
-	(*ListFileResponse)(nil), // 1: file.ListFileResponse
+	(*ListFilesRequest)(nil),  // 0: file.ListFilesRequest
+	(*ListFilesResponse)(nil), // 1: file.ListFilesResponse
 }
 var file_proto_file_proto_depIdxs = []int32{
-	0, // 0: file.FileService.ListFiles:input_type -> file.ListFileRequest
-	0, // 1: file.FileService.ListFiles:output_type -> file.ListFileRequest
+	0, // 0: file.FileService.ListFiles:input_type -> file.ListFilesRequest
+	1, // 1: file.FileService.ListFiles:output_type -> file.ListFilesResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -156,7 +156,7 @@ func file_proto_file_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_proto_file_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListFileRequest); i {
+			switch v := v.(*ListFilesRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -168,7 +168,7 @@ func file_proto_file_proto_init() {
 			}
 		}
 		file_proto_file_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListFileResponse); i {
+			switch v := v.(*ListFilesResponse); i {
 			case 0:
 				return &v.state
 			case 1:

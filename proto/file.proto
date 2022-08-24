@@ -4,13 +4,13 @@ package file;
 
 option go_package = "./pb";
 
-message ListFileRequest {};
-message ListFileResponse {
+message ListFilesRequest {};
+message ListFilesResponse {
   repeated string filenames = 1;
 };
 
 service FileService {
-  rpc ListFiles (ListFileRequest) returns (ListFileRequest);
+  rpc ListFiles (ListFilesRequest) returns (ListFilesResponse);
 }
 
 
